@@ -1,24 +1,24 @@
 .calculator {
-  background: var(--surface);
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.06), transparent 32%),
+    linear-gradient(180deg, #30343a 0%, var(--surface) 46%, #1b1d20 100%);
   border-radius: 8px;
-  border: 1px solid var(--border);
-  padding: 20px;
-  box-shadow: var(--shadow), 0 0 0 1px rgba(255,255,255,0.04);
-  width: 300px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 24px 20px 20px;
+  box-shadow: var(--shadow), 0 0 0 1px rgba(0, 0, 0, 0.7);
+  width: min(340px, calc(100vw - 32px));
   position: relative;
   overflow: hidden;
 }
 
 .calculator::before {
-  content: 'CALC-9000';
+  content: 'CALC-9000  //  REACT UNIT';
   position: absolute;
-  top: 10px;
+  top: 12px;
   left: 20px;
   font-family: 'Share Tech Mono', monospace;
-  font-size: 9px;
-  letter-spacing: 3px;
-  color: var(--text-dim);
-  opacity: 0.5;
+  font-size: 10px;
+  color: rgba(244, 239, 228, 0.56);
 }
 
 .calculator::after {
@@ -27,6 +27,13 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  height: 3px;
+  background: linear-gradient(90deg, var(--cyan), var(--accent), var(--red));
+  opacity: 0.9;
+}
+
+@media (max-width: 380px) {
+  .calculator {
+    padding-inline: 16px;
+  }
 }
