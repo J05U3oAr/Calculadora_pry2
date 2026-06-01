@@ -1,0 +1,82 @@
+.calc-btn {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 14px 8px;
+  border: 1px solid var(--border);
+  transition: all 0.08s ease;
+  letter-spacing: 1px;
+  position: relative;
+  box-shadow: var(--inset), 0 3px 0 rgba(0,0,0,0.4);
+  outline: none;
+}
+
+.calc-btn:active {
+  transform: translateY(2px);
+  box-shadow: var(--inset), 0 1px 0 rgba(0,0,0,0.4);
+}
+
+.calc-btn:focus-visible {
+  box-shadow: var(--inset), 0 3px 0 rgba(0,0,0,0.4), 0 0 0 2px var(--accent);
+}
+
+.calc-btn--digit {
+  background: var(--surface-2);
+  color: var(--text);
+}
+
+.calc-btn--digit:hover {
+  background: #444240;
+  color: #fff;
+}
+
+.calc-btn--operator {
+  background: #2e2c38;
+  color: var(--accent);
+  border-color: #4a4860;
+}
+
+.calc-btn--operator:hover {
+  background: #3a3848;
+  color: #fff;
+  border-color: var(--accent-dim);
+}
+
+.calc-btn--action {
+  background: #2a2e2a;
+  color: #aad4a0;
+  border-color: #3a4a3a;
+}
+
+.calc-btn--action:hover {
+  background: #343e34;
+  color: #fff;
+}
+
+.calc-btn--clear {
+  background: #2e1e1e;
+  color: var(--red);
+  border-color: #4a2828;
+  font-weight: 700;
+}
+
+.calc-btn--clear:hover {
+  background: #3e2828;
+  color: #fff;
+  border-color: var(--red-dim);
+}
+
+.calc-btn--equals {
+  background: var(--accent-dim);
+  color: #1a1400;
+  border-color: var(--accent);
+  font-weight: 700;
+  box-shadow: var(--inset), 0 3px 0 rgba(0,0,0,0.4), 0 0 12px var(--accent-glow);
+}
+
+.calc-btn--equals:hover {
+  background: var(--accent);
+  box-shadow: var(--inset), 0 3px 0 rgba(0,0,0,0.4), 0 0 20px var(--accent-glow);
+}

@@ -1,0 +1,32 @@
+.calculator {
+  background: var(--surface);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  padding: 20px;
+  box-shadow: var(--shadow), 0 0 0 1px rgba(255,255,255,0.04);
+  width: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+.calculator::before {
+  content: 'CALC-9000';
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: var(--text-dim);
+  opacity: 0.5;
+}
+
+.calculator::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+}
