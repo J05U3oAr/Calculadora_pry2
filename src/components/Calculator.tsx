@@ -1,24 +1,20 @@
-import type { FC } from 'react'
 import { useCalculator } from '../hooks/useCalculator'
 import Display from './Display'
 import Keyboard from './Keyboard'
 import './Calculator.css'
-
-const Calculator: FC = () => {
-  const { display, operation, inputDigit, inputOperation, calculate, toggleSign, clear } = useCalculator()
-
+const Calculator = () => {
+  const calculator = useCalculator()
   return (
     <main className="calculator" aria-label="Calculator">
-      <Display value={display} operation={operation} />
+      <Display value={calculator.display} operation={calculator.operation} />
       <Keyboard
-        onDigit={inputDigit}
-        onOperation={inputOperation}
-        onCalculate={calculate}
-        onToggleSign={toggleSign}
-        onClear={clear}
+        onDigit={calculator.inputDigit}
+        onOperation={calculator.inputOperation}
+        onCalculate={calculator.calculate}
+        onToggleSign={calculator.toggleSign}
+        onClear={calculator.clear}
       />
     </main>
   )
 }
-
 export default Calculator
