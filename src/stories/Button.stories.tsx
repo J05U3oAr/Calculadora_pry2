@@ -5,7 +5,7 @@ const meta = {
   title: 'Calculator/Button',
   component: Button,
   tags: ['autodocs'],
-  args: { onClick: () => {} },
+  args: { onClick: () => {} }
 } satisfies Meta<typeof Button>
 
 export default meta

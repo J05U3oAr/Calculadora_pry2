@@ -5,7 +5,7 @@ const meta = {
   title: 'Calculator/Calculator',
   component: Calculator,
   tags: ['autodocs'],
-  parameters: { layout: 'centered' },
+  parameters: { layout: 'centered' }
 } satisfies Meta<typeof Calculator>
 
 export default meta

@@ -11,8 +11,8 @@ const meta = {
     onOperation: fn(),
     onCalculate: fn(),
     onToggleSign: fn(),
-    onClear: fn(),
-  },
+    onClear: fn()
+  }
 } satisfies Meta<typeof Keyboard>
 
 export default meta

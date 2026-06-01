@@ -4,7 +4,7 @@ import Display from '../components/Display'
 const meta = {
   title: 'Calculator/Display',
   component: Display,
-  tags: ['autodocs'],
+  tags: ['autodocs']
 } satisfies Meta<typeof Display>
 
 export default meta

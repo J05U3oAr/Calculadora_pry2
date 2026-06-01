@@ -1,100 +1,77 @@
-# CALC-9000 🖩
+# CALC-9000
 
-Una calculadora retro-industrial construida con React + TypeScript + Vite.
+Calculadora hecha con React, TypeScript y Vite.
 
-## Stack
+## Requisitos
 
-- **Runtime / Package Manager**: [Bun](https://bun.sh)
-- **Framework**: React 18 + TypeScript
-- **Build**: Vite
-- **Tests**: Vitest + Testing Library
-- **Linting**: ESLint (Standard JS + reglas custom)
-- **Docs**: Storybook 8
-- **CI**: GitHub Actions
+- Node.js 20 o superior
+- npm
 
-## Requisitos previos
-
-Instalar [Bun](https://bun.sh):
+## Instalacion
 
 ```bash
-curl -fsSL https://bun.sh/install | bash
+npm install
 ```
 
-## Instalación
+## Correr la aplicacion
 
 ```bash
-bun install
+npm run dev
 ```
 
-## Correr la aplicación
-
-```bash
-bun run dev
-```
-
-Abre [http://localhost:5173](http://localhost:5173)
+Luego abre `http://localhost:5173`.
 
 ## Correr los tests
 
 ```bash
-bun test
+npm test
 ```
 
 Para modo watch:
 
 ```bash
-bun run test:watch
+npm run test:watch
 ```
 
 ## Correr el lint
 
 ```bash
-bun run lint
+npm run lint
 ```
 
 ## Correr Storybook
 
 ```bash
-bun run storybook
+npm run storybook
 ```
 
-Abre [http://localhost:6006](http://localhost:6006)
+Luego abre `http://localhost:6006`.
 
 ## Funcionalidades
 
-- ✅ Suma, resta, multiplicación, división, módulo
-- ✅ Punto decimal
-- ✅ Toggle de signo (+/-)
-- ✅ Límite de 9 caracteres en display
-- ✅ ERROR en resultados negativos o > 999999999
-- ✅ ERROR en división por cero
-- ✅ Truncado de resultados con muchos decimales (ej: 22/7)
-- ✅ Hook personalizado `useCalculator`
-- ✅ Todos los componentes ≤ 20 líneas
-- ✅ Título y favicon custom (CALC-9000)
-- ✅ Atributos de accesibilidad (aria-labels, roles)
+- Suma, resta, multiplicacion, division y modulo
+- Punto decimal
+- Funcion `+/-`
+- Limite de 9 caracteres en el display
+- Estado `ERROR` para resultados negativos o mayores a `999999999`
+- Estado `ERROR` en division o modulo por cero
+- Hook personalizado `useCalculator`
+- Tests con Vitest y Testing Library
+- Historias de Storybook para componentes principales
+- Lint con Standard JS, sin punto y coma y maximo de 120 caracteres por linea
+- CI con GitHub Actions para tests y lint
 
-## Arquitectura
+## Estructura
 
-```
+```text
 src/
   components/
-    Button.tsx       # Botón reutilizable con variantes
-    Display.tsx      # Pantalla de la calculadora
-    Keyboard.tsx     # Teclado con todos los botones
-    Calculator.tsx   # Componente raíz
+    Button.tsx
+    Display.tsx
+    Keyboard.tsx
+    Calculator.tsx
   hooks/
-    useCalculator.ts # Toda la lógica encapsulada en un hook
-  stories/           # Historias de Storybook
-  test/              # Tests de Vitest
+    useCalculator.ts
+  stories/
+  test/
 ```
-
-## Reglas de linting custom
-
-- ❌ Sin punto y coma (`semi: never`)
-- ❌ Máximo 120 caracteres por línea (`max-len: 120`)
-- ✅ Standard JS como base
-
-## CI
-
-GitHub Actions corre automáticamente lint y tests en cada push y pull request.

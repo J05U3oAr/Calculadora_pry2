@@ -17,7 +17,7 @@ const initialState: CalculatorState = {
   display: '0',
   pendingValue: null,
   operation: null,
-  waitingForOperand: false,
+  waitingForOperand: false
 }
 
 const clampResult = (value: number): string => {
@@ -35,12 +35,12 @@ const clampResult = (value: number): string => {
 
 const applyOperation = (a: number, b: number, op: Operation): number => {
   switch (op) {
-  case '+': return a + b
-  case '-': return a - b
-  case '*': return a * b
-  case '/': return b === 0 ? -1 : a / b
-  case '%': return b === 0 ? -1 : a % b
-  default: return b
+    case '+': return a + b
+    case '-': return a - b
+    case '*': return a * b
+    case '/': return b === 0 ? -1 : a / b
+    case '%': return b === 0 ? -1 : a % b
+    default: return b
   }
 }
 
@@ -73,14 +73,14 @@ export const useCalculator = () => {
           display: displayed,
           pendingValue: displayed === ERROR ? null : result,
           operation: op,
-          waitingForOperand: true,
+          waitingForOperand: true
         }
       }
       return {
         ...prev,
         pendingValue: current,
         operation: op,
-        waitingForOperand: true,
+        waitingForOperand: true
       }
     })
   }, [])
@@ -95,7 +95,7 @@ export const useCalculator = () => {
         display: clampResult(result),
         pendingValue: null,
         operation: null,
-        waitingForOperand: true,
+        waitingForOperand: true
       }
     })
   }, [])
@@ -123,6 +123,6 @@ export const useCalculator = () => {
     inputOperation,
     calculate,
     toggleSign,
-    clear,
+    clear
   }
 }
